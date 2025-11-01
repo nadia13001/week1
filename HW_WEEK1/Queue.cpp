@@ -28,7 +28,17 @@ void cleanQueue(Queue* q)
 */
 void enqueue(Queue* q, unsigned int newValue)
 {
-
+	if (isFull(q))
+	{
+		return;
+	}
+	q->arr[q->last] = newValue;
+	q->last++;
+	if (q->last == q->size)
+	{
+		q->last = 0;
+	}
+	q->sizeUsed++;
 }
 /*
 
