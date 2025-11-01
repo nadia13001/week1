@@ -34,16 +34,17 @@ Output: none
 */
 void enqueue(Queue* q, unsigned int newValue)
 {
-	if (!isFull(q))
+	if (isFull(q))
 	{
-		q->arr[q->last] = newValue;
-		q->last++;
-		if (q->last == q->size)
-		{
-			q->last = 0;
-		}
-		q->sizeUsed++;
+		return;
 	}
+	q->arr[q->last] = newValue;
+	q->last++;
+	if (q->last == q->size)
+	{
+		q->last = 0;
+	}
+	q->sizeUsed++;
 }
 /*
 Function removes and returns the first value from the queue if it's not empty
