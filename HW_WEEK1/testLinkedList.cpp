@@ -13,7 +13,7 @@ int main()
     printList(head);
 
     std::cout << "Check func isEmpty:" << std::endl;
-    if (isEmpty(head))
+    if (listIsEmpty(head))
     {
         std::cout << "List is empty." << std::endl;
     }
@@ -30,7 +30,7 @@ int main()
     printList(head); 
 
     std::cout << "\nCheck" << std::endl;
-    if (isEmpty(head)) 
+    if (listIsEmpty(head)) 
     {
         std::cout << "List is empty." << std::endl;
     }

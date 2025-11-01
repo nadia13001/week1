@@ -32,7 +32,7 @@ Checks whether the linked list is empty.
 Input: pointer to the head node.
 Output: true if the list is empty, false otherwise.
 */
-bool isEmpty(node* head)
+bool listIsEmpty(node* head)
 {
     return head == nullptr;
 }
@@ -43,7 +43,7 @@ Output:none
 */
 void freeList(node** head)
 {
-    while (!isEmpty(*head))
+    while (!listIsEmpty(*head))
     {
         removeFromList(head);
     }

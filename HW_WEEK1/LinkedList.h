@@ -9,7 +9,7 @@ typedef struct node
 
 void addToList(node** head, unsigned int value);
 void removeFromList(node** head);
-bool isEmpty(node* head);
+bool listIsEmpty(node* head);
 void freeList(node** head);
 
 #endif /* LINKED_LIST_H */
