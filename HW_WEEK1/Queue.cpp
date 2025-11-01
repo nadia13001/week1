@@ -5,14 +5,23 @@
 */
 void initQueue(Queue* q, unsigned int size)
 {
-
+	q->arr = new unsigned int[size];
+	q->size = size;
+	q->first = 0;
+	q->last = 0;
+	q->sizeUsed = 0;
 }
 /*
 
 */
 void cleanQueue(Queue* q)
 {
-
+	delete[] q->arr;
+	q->arr = nullptr;
+	q->size = 0;
+	q->first = 0;
+	q->last = 0;
+	q->sizeUsed = 0;
 }
 /*
 
