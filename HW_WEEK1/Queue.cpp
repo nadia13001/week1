@@ -45,19 +45,31 @@ void enqueue(Queue* q, unsigned int newValue)
 */
 int dequeue(Queue* q)
 {
-
+	int value = 0;
+	if (isEmpty(q))
+	{
+		return -1;
+	}
+	value = q->arr[q->first];
+	q->first++;
+	if (q->first == q->size)
+	{
+		q->first = 0;
+	}
+	q->sizeUsed--;
+	return value;
 }
 /*
 
 */
 bool isEmpty(Queue* s)
 {
-
+	return s->sizeUsed == 0;
 }
 /*
 
 */
 bool isFull(Queue* s)
 {
-
+	return s->sizeUsed == s->size;
 }
