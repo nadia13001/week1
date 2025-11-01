@@ -7,7 +7,6 @@ typedef struct node
     struct node* next;
 } node;
 
-void initList(node** head);
 void addToList(node** head, unsigned int value);
 void removeFromList(node** head);
 bool isEmpty(node* head);

@@ -1,10 +1,6 @@
 #include <iostream>
 #include "LinkedList.h"
 
-void initList(node** head) 
-{
-	*head = nullptr;
-}
 void addToList(node** head, unsigned int value)
 {
 	node* newNode = new node;
